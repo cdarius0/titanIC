@@ -1,0 +1,19 @@
+<resources>
+    <string name="rules">Rules</string>
+    <string name="start">START</string>
+    <string name="titanic">titanIC</string>
+    <string name="top">Top</string>
+    <string name="b_arrow">arrow back to main screen</string>
+    <string name="rules_info">These are The Rules</string>
+    <string name="rules_text">Players:\n -2\n\n Goal:\n -Sink all of your opponent\'s ships \n\nSetup:\n -Each player places ships on the grid\n\n Rules:\n -Take turns firing shots by taping on the map\n -This will conclude in a hit or a miss\n -If it\'s a hit the current player’s turn continues, otherwise it\'s the other player\'s turn</string>
+    <string name="insert_name_of_player1">Player 1</string>
+    <string name="insert_name_of_player2">Player 2</string>
+    <string name="miniwimg">Image of Mini waves</string>
+    <string name="nextButton">Next</string>
+    <string name="size_1_ship">Size 1 ship</string>
+    <string name="size2Ship">Ship of size 2</string>
+    <string name="play_name">Play</string>
+    <string name="name_of_player2">Player2</string>
+    <color name="white">#FFFFFF</color>
+    <color name="PaleGreen">#98FB98</color>
+</resources>
