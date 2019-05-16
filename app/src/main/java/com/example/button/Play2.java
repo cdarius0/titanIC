@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.TextInputLayout;
 import android.view.MotionEvent;
 import android.view.View;
@@ -112,7 +113,7 @@ public class Play2 extends Activity {
 
         @SuppressLint("ClickableViewAccessibility")
         @Override
-        public boolean onTouch(View view, MotionEvent event) {
+        public boolean onTouch(final View view, MotionEvent event) {
             final int X = (int) event.getRawX();
             final int Y = (int) event.getRawY();
             switch(event.getAction() & MotionEvent.ACTION_MASK){
@@ -120,7 +121,15 @@ public class Play2 extends Activity {
                     RelativeLayout.LayoutParams lParams = (RelativeLayout.LayoutParams) view.getLayoutParams();
                     _xDelta1_0 = X - lParams.leftMargin;
                     _yDelta1_0 = Y - lParams.topMargin;
-                case MotionEvent.ACTION_UP:
+                case MotionEvent.ACTION_UP: {
+                    final Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            Play.precisePosition((ImageView) view);
+                        }
+                    }, 50);
+                }
                     break;
                 case MotionEvent.ACTION_POINTER_DOWN:
                     break;
@@ -186,10 +195,10 @@ public class Play2 extends Activity {
         String username2 = et_.getText().toString().trim();
 
         if (username2.isEmpty()) {
-            et_.setError("Field can't be empty!!!");
+            et_.setError("Field can't be empty.");
             return false;
         } else if (username2.length() > 15) {
-            et_.setError("Fewer than 15 characters!!!");
+            et_.setError("Fewer than 15 characters.");
             return false;
         } else {
             et_.setError(null);
