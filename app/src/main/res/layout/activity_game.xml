@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/Game"
+    android:id="@+id/gamePage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
@@ -17,28 +17,27 @@
         />
 
 
-
-
     <TextView
         android:id="@+id/user1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="20sp"
         android:layout_marginStart="130dp"
+        android:layout_marginLeft="130dp"
         android:layout_marginTop="25dp"
         android:text="User1"
-        android:layout_marginLeft="130dp" />
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
     <TextView
-        android:layout_marginStart="440dp"
-        android:layout_marginTop="25dp"
         android:id="@+id/user2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="20sp"
+        android:layout_marginStart="440dp"
+        android:layout_marginLeft="440dp"
+        android:layout_marginTop="25dp"
         android:text="User2"
-        android:layout_marginLeft="440dp" />
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
     <ImageView
 
@@ -46,10 +45,11 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="45dp"
+        android:layout_marginLeft="45dp"
         android:layout_marginTop="70dp"
         android:background="@drawable/mw"
-        android:contentDescription="@string/miniwimg"
-        android:layout_marginLeft="45dp" />
+        android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/A2"
         android:layout_width="30dp"
@@ -70,6 +70,7 @@
 
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/A4"
         android:layout_width="30dp"
@@ -79,6 +80,7 @@
 
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/A5"
         android:layout_width="30dp"
@@ -87,6 +89,7 @@
         android:layout_toEndOf="@id/A4"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/A6"
         android:layout_width="30dp"
@@ -95,6 +98,7 @@
         android:layout_toEndOf="@id/A5"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/A7"
         android:layout_width="30dp"
@@ -103,6 +107,7 @@
         android:layout_toEndOf="@id/A6"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/A8"
         android:layout_width="30dp"
@@ -120,6 +125,7 @@
         android:layout_marginStart="45dp"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/B2"
         android:layout_width="30dp"
@@ -137,6 +143,7 @@
         android:layout_toEndOf="@id/B2"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/B4"
         android:layout_width="30dp"
@@ -145,6 +152,7 @@
         android:layout_toEndOf="@id/B3"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/B5"
         android:layout_width="30dp"
@@ -153,15 +161,16 @@
         android:layout_toEndOf="@id/B4"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
-        android:background="@drawable/mw"
-        android:contentDescription="@string/miniwimg"
+        android:id="@+id/B6"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:id="@+id/B6"
-        android:layout_toEndOf="@id/B5"
         android:layout_below="@id/A6"
-        />
+        android:layout_toEndOf="@id/B5"
+        android:background="@drawable/mw"
+        android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/B7"
         android:layout_width="30dp"
@@ -170,6 +179,7 @@
         android:layout_toEndOf="@id/B6"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/B8"
         android:layout_width="30dp"
@@ -178,14 +188,16 @@
         android:layout_toEndOf="@id/B7"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/C1"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_below="@id/B1"
-                     android:layout_marginStart="45dp"
+        android:layout_marginStart="45dp"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/C2"
         android:layout_width="30dp"
@@ -203,6 +215,7 @@
         android:layout_toEndOf="@id/C2"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/C4"
         android:layout_width="30dp"
@@ -211,6 +224,7 @@
         android:layout_toEndOf="@id/C3"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/C5"
         android:layout_width="30dp"
@@ -219,6 +233,7 @@
         android:layout_toEndOf="@id/C4"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/C6"
         android:layout_width="30dp"
@@ -227,6 +242,7 @@
         android:layout_toEndOf="@id/C5"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/C7"
         android:layout_width="30dp"
@@ -235,6 +251,7 @@
         android:layout_toEndOf="@id/C6"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/C8"
         android:layout_width="30dp"
@@ -249,9 +266,10 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_below="@id/C1"
-                     android:layout_marginStart="45dp"
+        android:layout_marginStart="45dp"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/D2"
         android:layout_width="30dp"
@@ -269,6 +287,7 @@
         android:layout_toEndOf="@id/D2"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/D4"
         android:layout_width="30dp"
@@ -277,6 +296,7 @@
         android:layout_toEndOf="@id/D3"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/D5"
         android:layout_width="30dp"
@@ -285,6 +305,7 @@
         android:layout_toEndOf="@id/D4"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/D6"
         android:layout_width="30dp"
@@ -293,6 +314,7 @@
         android:layout_toEndOf="@id/D5"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/D7"
         android:layout_width="30dp"
@@ -301,6 +323,7 @@
         android:layout_toEndOf="@id/D6"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/D8"
         android:layout_width="30dp"
@@ -309,6 +332,7 @@
         android:layout_toEndOf="@id/D7"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/E1"
         android:layout_width="30dp"
@@ -317,6 +341,7 @@
         android:layout_marginStart="45dp"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/E2"
         android:layout_width="30dp"
@@ -334,6 +359,7 @@
         android:layout_toEndOf="@id/E2"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/E4"
         android:layout_width="30dp"
@@ -342,6 +368,7 @@
         android:layout_toEndOf="@id/E3"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/E5"
         android:layout_width="30dp"
@@ -350,6 +377,7 @@
         android:layout_toEndOf="@id/E4"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/E6"
         android:layout_width="30dp"
@@ -358,6 +386,7 @@
         android:layout_toEndOf="@id/E5"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/E7"
         android:layout_width="30dp"
@@ -366,6 +395,7 @@
         android:layout_toEndOf="@id/E6"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/E8"
         android:layout_width="30dp"
@@ -383,6 +413,7 @@
         android:layout_marginStart="45dp"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/F2"
         android:layout_width="30dp"
@@ -400,6 +431,7 @@
         android:layout_toEndOf="@id/F2"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/F4"
         android:layout_width="30dp"
@@ -408,6 +440,7 @@
         android:layout_toEndOf="@id/F3"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/F5"
         android:layout_width="30dp"
@@ -416,6 +449,7 @@
         android:layout_toEndOf="@id/F4"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/F6"
         android:layout_width="30dp"
@@ -424,6 +458,7 @@
         android:layout_toEndOf="@id/F5"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/F7"
         android:layout_width="30dp"
@@ -432,6 +467,7 @@
         android:layout_toEndOf="@id/F6"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/F8"
         android:layout_width="30dp"
@@ -440,6 +476,7 @@
         android:layout_toEndOf="@id/F7"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/G1"
         android:layout_width="30dp"
@@ -448,6 +485,7 @@
         android:layout_marginStart="45dp"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/G2"
         android:layout_width="30dp"
@@ -465,6 +503,7 @@
         android:layout_toEndOf="@id/G2"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/G4"
         android:layout_width="30dp"
@@ -473,6 +512,7 @@
         android:layout_toEndOf="@id/G3"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/G5"
         android:layout_width="30dp"
@@ -481,6 +521,7 @@
         android:layout_toEndOf="@id/G4"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/G6"
         android:layout_width="30dp"
@@ -489,6 +530,7 @@
         android:layout_toEndOf="@id/G5"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/G7"
         android:layout_width="30dp"
@@ -497,6 +539,7 @@
         android:layout_toEndOf="@id/G6"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/G8"
         android:layout_width="30dp"
@@ -514,6 +557,7 @@
         android:layout_marginStart="45dp"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/H2"
         android:layout_width="30dp"
@@ -531,6 +575,7 @@
         android:layout_toEndOf="@id/H2"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/H4"
         android:layout_width="30dp"
@@ -539,6 +584,7 @@
         android:layout_toEndOf="@id/H3"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/H5"
         android:layout_width="30dp"
@@ -547,6 +593,7 @@
         android:layout_toEndOf="@id/H4"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/H6"
         android:layout_width="30dp"
@@ -555,6 +602,7 @@
         android:layout_toEndOf="@id/H5"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/H7"
         android:layout_width="30dp"
@@ -563,6 +611,7 @@
         android:layout_toEndOf="@id/H6"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/H8"
         android:layout_width="30dp"
@@ -573,9 +622,8 @@
         android:contentDescription="@string/miniwimg" />
 
 
-
     //Playwe 2
-    
+
 
     <ImageView
 
@@ -586,6 +634,7 @@
         android:layout_marginTop="70dp"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/A21"
         android:layout_width="30dp"
@@ -605,6 +654,7 @@
 
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/A41"
         android:layout_width="30dp"
@@ -614,6 +664,7 @@
 
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/A51"
         android:layout_width="30dp"
@@ -622,6 +673,7 @@
         android:layout_toEndOf="@id/A41"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/A61"
         android:layout_width="30dp"
@@ -630,6 +682,7 @@
         android:layout_toEndOf="@id/A51"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/A71"
         android:layout_width="30dp"
@@ -638,6 +691,7 @@
         android:layout_toEndOf="@id/A61"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/A81"
         android:layout_width="30dp"
@@ -655,6 +709,7 @@
         android:layout_marginStart="350dp"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/B21"
         android:layout_width="30dp"
@@ -672,6 +727,7 @@
         android:layout_toEndOf="@id/B21"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/B41"
         android:layout_width="30dp"
@@ -680,6 +736,7 @@
         android:layout_toEndOf="@id/B31"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/B51"
         android:layout_width="30dp"
@@ -688,15 +745,16 @@
         android:layout_toEndOf="@id/B41"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
-        android:background="@drawable/mw"
-        android:contentDescription="@string/miniwimg"
+        android:id="@+id/B61"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:id="@+id/B61"
-        android:layout_toEndOf="@id/B51"
         android:layout_below="@id/A61"
-        />
+        android:layout_toEndOf="@id/B51"
+        android:background="@drawable/mw"
+        android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/B71"
         android:layout_width="30dp"
@@ -705,6 +763,7 @@
         android:layout_toEndOf="@id/B61"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/B81"
         android:layout_width="30dp"
@@ -713,6 +772,7 @@
         android:layout_toEndOf="@id/B71"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/C11"
         android:layout_width="30dp"
@@ -721,6 +781,7 @@
         android:layout_marginStart="350dp"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/C21"
         android:layout_width="30dp"
@@ -738,6 +799,7 @@
         android:layout_toEndOf="@id/C21"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/C41"
         android:layout_width="30dp"
@@ -746,6 +808,7 @@
         android:layout_toEndOf="@id/C31"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/C51"
         android:layout_width="30dp"
@@ -754,6 +817,7 @@
         android:layout_toEndOf="@id/C41"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/C61"
         android:layout_width="30dp"
@@ -762,6 +826,7 @@
         android:layout_toEndOf="@id/C51"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/C71"
         android:layout_width="30dp"
@@ -770,6 +835,7 @@
         android:layout_toEndOf="@id/C61"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/C81"
         android:layout_width="30dp"
@@ -787,6 +853,7 @@
         android:layout_marginStart="350dp"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/D21"
         android:layout_width="30dp"
@@ -804,6 +871,7 @@
         android:layout_toEndOf="@id/D21"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/D41"
         android:layout_width="30dp"
@@ -812,6 +880,7 @@
         android:layout_toEndOf="@id/D31"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/D51"
         android:layout_width="30dp"
@@ -820,6 +889,7 @@
         android:layout_toEndOf="@id/D41"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/D61"
         android:layout_width="30dp"
@@ -828,6 +898,7 @@
         android:layout_toEndOf="@id/D51"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/D71"
         android:layout_width="30dp"
@@ -836,6 +907,7 @@
         android:layout_toEndOf="@id/D61"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/D81"
         android:layout_width="30dp"
@@ -844,6 +916,7 @@
         android:layout_toEndOf="@id/D71"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/E11"
         android:layout_width="30dp"
@@ -852,6 +925,7 @@
         android:layout_marginStart="350dp"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/E21"
         android:layout_width="30dp"
@@ -869,6 +943,7 @@
         android:layout_toEndOf="@id/E21"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/E41"
         android:layout_width="30dp"
@@ -877,6 +952,7 @@
         android:layout_toEndOf="@id/E31"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/E51"
         android:layout_width="30dp"
@@ -885,6 +961,7 @@
         android:layout_toEndOf="@id/E41"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/E61"
         android:layout_width="30dp"
@@ -893,6 +970,7 @@
         android:layout_toEndOf="@id/E51"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/E71"
         android:layout_width="30dp"
@@ -901,6 +979,7 @@
         android:layout_toEndOf="@id/E61"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/E81"
         android:layout_width="30dp"
@@ -918,6 +997,7 @@
         android:layout_marginStart="350dp"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/F21"
         android:layout_width="30dp"
@@ -935,6 +1015,7 @@
         android:layout_toEndOf="@id/F21"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/F41"
         android:layout_width="30dp"
@@ -943,6 +1024,7 @@
         android:layout_toEndOf="@id/F31"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/F51"
         android:layout_width="30dp"
@@ -951,6 +1033,7 @@
         android:layout_toEndOf="@id/F41"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/F61"
         android:layout_width="30dp"
@@ -959,6 +1042,7 @@
         android:layout_toEndOf="@id/F51"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/F71"
         android:layout_width="30dp"
@@ -967,6 +1051,7 @@
         android:layout_toEndOf="@id/F61"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/F81"
         android:layout_width="30dp"
@@ -975,6 +1060,7 @@
         android:layout_toEndOf="@id/F71"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/G11"
         android:layout_width="30dp"
@@ -983,6 +1069,7 @@
         android:layout_marginStart="350dp"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/G21"
         android:layout_width="30dp"
@@ -1000,6 +1087,7 @@
         android:layout_toEndOf="@id/G21"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/G41"
         android:layout_width="30dp"
@@ -1008,6 +1096,7 @@
         android:layout_toEndOf="@id/G31"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/G51"
         android:layout_width="30dp"
@@ -1016,6 +1105,7 @@
         android:layout_toEndOf="@id/G41"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/G61"
         android:layout_width="30dp"
@@ -1024,6 +1114,7 @@
         android:layout_toEndOf="@id/G51"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/G71"
         android:layout_width="30dp"
@@ -1032,6 +1123,7 @@
         android:layout_toEndOf="@id/G61"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/G81"
         android:layout_width="30dp"
@@ -1049,6 +1141,7 @@
         android:layout_marginStart="350dp"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/H21"
         android:layout_width="30dp"
@@ -1066,6 +1159,7 @@
         android:layout_toEndOf="@id/H21"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/H41"
         android:layout_width="30dp"
@@ -1074,6 +1168,7 @@
         android:layout_toEndOf="@id/H31"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/H51"
         android:layout_width="30dp"
@@ -1082,6 +1177,7 @@
         android:layout_toEndOf="@id/H41"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/H61"
         android:layout_width="30dp"
@@ -1090,6 +1186,7 @@
         android:layout_toEndOf="@id/H51"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/H71"
         android:layout_width="30dp"
@@ -1098,6 +1195,7 @@
         android:layout_toEndOf="@id/H61"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
+
     <ImageView
         android:id="@+id/H81"
         android:layout_width="30dp"
@@ -1106,6 +1204,15 @@
         android:layout_toEndOf="@id/H71"
         android:background="@drawable/mw"
         android:contentDescription="@string/miniwimg" />
-
+    <ImageView
+        android:id="@+id/ArrowTurn"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="7dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/C8"
+        android:layout_toEndOf="@id/D8"
+        android:background="@drawable/white_arrow"
+         />
 
 </RelativeLayout>
