@@ -38,8 +38,8 @@ public class Play extends Activity {
         finish();
         openMainActivity();
     }
-    public static int getLocationPlayer1(int x,int y){
-        return player1Locations[x][y];
+    public static int getLocationPlayer1(int y,int x){
+        return player1Locations[y][x];
     }
     public static void setLocationPlayer1ToZero( int x, int y){
         player1Locations[x][y]=0;

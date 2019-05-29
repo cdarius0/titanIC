@@ -41,7 +41,7 @@ public class Game extends Activity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
-    private void onMakeMove(int x,int y,int a){//puts the image and returns miss or hit
+    private void onMakeMove(int y,int x,int a,int playerToBeHit){//puts the image and returns miss or hit
 
         imageWavesOnTouch = new ImageView(Game.this);
         if(a==1) {
@@ -52,76 +52,104 @@ public class Game extends Activity {
             imageWavesOnTouch.setImageResource(R.drawable.mini_waves_miss);
             a=-5;
         }
-        imageWavesOnTouch.setX(x*79+118);
+        if(playerToBeHit==2) {
+            Play2.setLocationPlayer2(y, x, a);
+            imageWavesOnTouch.setX(x*79+919);
+        }
+        else if(playerToBeHit==1) {
+            Play.setLocationPlayer1(y, x, a);
+            imageWavesOnTouch.setX(x*79+118);
+
+        }
         imageWavesOnTouch.setY(y*79+184);
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(79, 79);
         imageWavesOnTouch.setLayoutParams(layoutParams);
         rootLayout.addView(imageWavesOnTouch);
-//        return a;
+
     }
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         int x = (int)event.getX();
         int y = (int)event.getY();
+        int x1,y1;
+        int a;
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN://touch
-                if(countHitsOnPlayer1<11&&countHitsOnPlayer2<11) {
+                if (countHitsOnPlayer1 < 11 && countHitsOnPlayer2 < 11) {
 //                    Toast.makeText(this, x + " - " + y, Toast.LENGTH_SHORT).show();
 //                    arrow.setImageResource(R.drawable.white_arrow_right);
-                    int x1=(x-118)/79;
-                    int y1=(y-184)/79;
-                    if(player1Round && x>=919 && x<=1551 && y >=184 && y <= 816){
+
+                    if (player1Round && x >= 919 && x < 1551 && y >= 184 && y < 816) {//player1's moves
+                        x1 = (x - 919) / 79;
+                        y1 = (y - 184) / 79;
+
                         imageWavesOnTouch = new ImageView(Game.this);
-//                        if(Play2.getLocationPlayer2(x1,y1)==1) {
-                            imageWavesOnTouch.setImageResource(R.drawable.mini_waves_hit1);
-                          //  a=5;
-//                        }
-//                        else if(Play2.getLocationPlayer2(x1,y1)==0) {
-//                            imageWavesOnTouch.setImageResource(R.drawable.mini_waves_miss);
-                          //  a=-5;
-//                        }
-                        imageWavesOnTouch.setX(x1*79+118);
-                        imageWavesOnTouch.setY(y1*79+184);
+
+
+                        imageWavesOnTouch.setX(x1 * 79 + 919);
+                        imageWavesOnTouch.setY(y1 * 79 + 184);
                         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(79, 79);
                         imageWavesOnTouch.setLayoutParams(layoutParams);
                         rootLayout.addView(imageWavesOnTouch);
-//                        if(Math.abs(Play2.getLocationPlayer2(x1,y1))==5)
-//                            Toast.makeText(this, "You already hit there", Toast.LENGTH_SHORT/3).show();
-//                        else {
-//                            if(onMakeMove(x1,y1,Play2.getLocationPlayer2(x1,y1))==5) {
-//                                Toast.makeText(this, "That's a hit!\n You get another shot.", Toast.LENGTH_SHORT / 3).show();
-//                                Play2.setLocationPlayer2(x1,y1,5);
-//                                }
-//                            else {
-//                                Play2.setLocationPlayer2(x1,y1,-5);
-//                                player1Round = false;
-//                                Toast.makeText(this, st2 + "You missed. :(", Toast.LENGTH_SHORT / 5).show();
-//                                Toast.makeText(this, st2 + "'s round", Toast.LENGTH_SHORT / 5).show();
-//                                arrow.setImageResource(R.drawable.white_arrow);
-//                            }
-//                        }
-
-                    }
-
-                    else if(!player1Round && x>=118 && x<=750 && y >=184 && y <= 816){//player2's move
-
-
-                        player1Round=true;
-                        Toast.makeText(this, st+"'s round", Toast.LENGTH_SHORT/4).show();
-                        arrow.setImageResource(R.drawable.white_arrow_right);
-
-
+                        if (Math.abs(Play2.getLocationPlayer2(y1, x1)) == 5)
+                            Toast.makeText(this, "You already hit there", Toast.LENGTH_SHORT / 10).show();
+                        else {
+                            if (Play2.getLocationPlayer2(y1, x1) == 1) {
+                                onMakeMove(y1, x1, 1, 2);
+                                countHitsOnPlayer2++;
+                                Toast.makeText(this, "That's a hit!\n You get another shot.", Toast.LENGTH_SHORT / 15).show();
+                            } else if (Play2.getLocationPlayer2(y1, x1) == 0) {
+                                onMakeMove(y1, x1, 0, 2);
+                                player1Round = false;
+                                Toast.makeText(this, st2 + ", you missed. :(", Toast.LENGTH_SHORT / 15).show();
+                                arrow.setImageResource(R.drawable.white_arrow);
+                            }
+                        }
                     }
 
 
+                    else if (!player1Round && x >= 118 && x < 750 && y >= 184 && y < 816) {//player2's move
+                        x1 = (x - 118) / 79;
+                        y1 = (y - 184) / 79;
+                        imageWavesOnTouch = new ImageView(Game.this);
 
+
+                        imageWavesOnTouch.setX(x1 * 79 + 118);
+                        imageWavesOnTouch.setY(y1 * 79 + 184);
+                        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(79, 79);
+                        imageWavesOnTouch.setLayoutParams(layoutParams);
+                        rootLayout.addView(imageWavesOnTouch);
+                        if (Math.abs(Play.getLocationPlayer1(y1, x1)) == 5)
+                            Toast.makeText(this, "You already hit there", Toast.LENGTH_SHORT / 10).show();
+                        else {
+
+                            if (Play.getLocationPlayer1(y1, x1) == 1) {
+                                onMakeMove(y1, x1, 1, 1);
+                                countHitsOnPlayer1++;
+                                Toast.makeText(this, "That's a hit!\n You get another shot.", Toast.LENGTH_SHORT / 15).show();
+                            }
+                            else if (Play2.getLocationPlayer2(y1, x1) == 0) {
+                                onMakeMove(y1, x1, 0, 1);
+                                player1Round = true;
+                                Toast.makeText(this, st + ", you missed. :(", Toast.LENGTH_SHORT / 15).show();
+                                arrow.setImageResource(R.drawable.white_arrow_right);
+                            }
+
+                        }
+
+
+
+                    }//player 2 moves
                 }
-                else if(countHitsOnPlayer1==11)
-                    Toast.makeText(this, "Congratulations "+ st2 +"\n you sank all of your enemy's ships!",
-                            Toast.LENGTH_LONG*10).show();
-                else if(countHitsOnPlayer2==11)
-                    Toast.makeText(this, "Congratulations "+ st +"\n you sank all of your enemy's ships!",
-                            Toast.LENGTH_LONG*10).show();
+
+                else if (countHitsOnPlayer1 == 11)
+                    for(int i=0;i<10;i++)
+                    Toast.makeText(this, "Congratulations " + st2 + "\n you sank all of your enemy's ships!",
+                            Toast.LENGTH_LONG * 100).show();
+                else if (countHitsOnPlayer2 == 11)
+                    for(int i=0;i<10;i++)
+                        Toast.makeText(this, "Congratulations " + st + "\n you sank all of your enemy's ships!",
+                            Toast.LENGTH_LONG * 100).show();
 //
 //        Aa1=rootLayout.findViewById(R.id.A1);
 //        Ba2=rootLayout.findViewById(R.id.B2);
