@@ -44,6 +44,9 @@ public class Play extends Activity {
     public static void setLocationPlayer1ToZero( int x, int y){
         player1Locations[x][y]=0;
     }
+    public static void setLocationPlayer1( int x, int y, int value){
+        player1Locations[x][y]=value;
+    }
 
     public static void precisePosition(ImageView boat,int [][]a,Context context) {//tries to put boat exactly on squares
         int size = (int) (boat.getHeight() / 150.0);

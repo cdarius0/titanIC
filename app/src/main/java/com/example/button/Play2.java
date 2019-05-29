@@ -38,6 +38,12 @@ public class Play2 extends Activity {
     public static void setLocationPlayer2ToZero( int x, int y){
         player2Locations[x][y]=0;
     }
+    public static void setLocationPlayer2( int x, int y, int value){
+        player2Locations[x][y]=value;
+    }
+    public static int getLocationPlayer2(int x,int y){
+        return player2Locations[x][y];
+    }
     @Override
     public void onBackPressed() {
         for(int i=0;i<8;i++)
