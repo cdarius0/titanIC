@@ -296,6 +296,16 @@ public class Play extends Activity {
                   //  if(!flag_overlap)
                         removePositionFromMatrix((ImageView) view, player1Locations, getApplicationContext());
                  //   flag_overlap=false;
+
+
+//                    RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.im);
+//                    RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(
+//                            RelativeLayout.LayoutParams.WRAP_CONTENT,
+//                            RelativeLayout.LayoutParams.WRAP_CONTENT
+//                    );
+//                    layoutParams.addRule(RelativeLayout.BELOW, R.id.ButtonRecalculate);
+//                    layoutParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+
                     break;
                 case MotionEvent.ACTION_UP: {//RELEASE
                     final Handler handler = new Handler();

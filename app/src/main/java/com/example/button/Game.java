@@ -8,9 +8,12 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import java.lang.NullPointerException;
 import java.util.Objects;
 
 public class Game extends Activity {
@@ -20,6 +23,7 @@ public class Game extends Activity {
     ImageView Aa1,Ba2,Ha8;
     ImageView Aa11,Ba21,Ha81;
     ImageView arrow;
+    private ImageView imageWavesOnTouch;
 
     boolean player1Round=true;//if false it's player2's round
     int countHitsOnPlayer1=0;
@@ -50,14 +54,18 @@ public class Game extends Activity {
 
 
                         player1Round=false;
-                        Toast.makeText(this, st2+"'s round", Toast.LENGTH_SHORT/3).show();
+                        Toast.makeText(this, st2+"'s round", Toast.LENGTH_SHORT/4).show();
+                        arrow.setImageResource(R.drawable.white_arrow_right);
+
                     }
 
                     else if(!player1Round && x>=919 && x<=1551 && y >=184 && y <= 816){
 
 
                         player1Round=true;
-                        Toast.makeText(this, st+"'s round", Toast.LENGTH_SHORT/3).show();
+                        Toast.makeText(this, st+"'s round", Toast.LENGTH_SHORT/4).show();
+                        arrow.setImageResource(R.drawable.white_arrow);
+
 
                     }
 
@@ -70,7 +78,6 @@ public class Game extends Activity {
                 else if(countHitsOnPlayer2==11)
                     Toast.makeText(this, "Congratulations "+ st +"\n you sank all of your enemy's ships!",
                             Toast.LENGTH_LONG*10).show();
-//        rootLayout = findViewById(R.id.gamePage);
 //
 //        Aa1=rootLayout.findViewById(R.id.A1);
 //        Ba2=rootLayout.findViewById(R.id.B2);
@@ -96,8 +103,8 @@ public class Game extends Activity {
 
     @SuppressLint("NewApi")
     protected void onCreate(Bundle savedInstanceState) {
-//        rootLayout = findViewById(R.id.gamePage);
-        arrow= findViewById(R.id.ArrowTurn);
+        rootLayout = findViewById(R.id.gamePage);
+
 
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
@@ -111,7 +118,24 @@ public class Game extends Activity {
         tv2 = findViewById(R.id.user2);
         st2 = Objects.requireNonNull(getIntent().getExtras()).getString("Value2");
         tv2.setText(st2);
-        Toast.makeText(this, st+"'s round", Toast.LENGTH_SHORT/3).show();
+        Toast.makeText(this, st+"'s round", Toast.LENGTH_SHORT/4).show();
+        arrow=(ImageView) findViewById(R.id.ArrowTurn);
+        arrow.setImageResource(R.drawable.white_arrow);
+
+//
+//        imageWavesOnTouch = new ImageView(this);
+//        RelativeLayout.LayoutParams params = new RelativeLayout
+//                .LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+//        imageWavesOnTouch.setImageResource(R.drawable.mini_waves_hit);
+//        imageWavesOnTouch.setMaxHeight(30);
+//        imageWavesOnTouch.setMaxWidth(30);
+//        imageWavesOnTouch.setLayoutParams(params);
+//        imageWavesOnTouch.setMaxWidth(30);
+//        imageWavesOnTouch.setMaxHeight(30);
+//        imageWavesOnTouch.setX(118);
+//        imageWavesOnTouch.setY(184);
+//        rootLayout.addView(imageWavesOnTouch);
+
 
     }
 }

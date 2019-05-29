@@ -1212,7 +1212,6 @@
         android:layout_height="45dp"
         android:layout_below="@id/C8"
         android:layout_toEndOf="@id/D8"
-        android:background="@drawable/white_arrow"
-         />
+        tools:ignore="ContentDescription" />
 
 </RelativeLayout>
