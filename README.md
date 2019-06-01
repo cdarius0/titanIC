@@ -1,3 +1,3 @@
 # titanIC
-### An implementation of the classical Battleship game
+### An implementation of the classic Battleship game
 ![Gif](t.gif)
